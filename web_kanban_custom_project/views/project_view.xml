@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="web_kanban_custom_project_task">
+            <field name="name">project.task.web_kanban_custom</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="priority" eval="10"/>
+            <field name="arch" type="xml">
+                <field name="legend_done" position="after">
+                    <field name="create_date" />
+                    <field name="write_date"/>
+                    <field name="date_end"/>
+                    <field name="date_deadline"/>
+                     <field name="date_assign"/>
+                    <field name="date_last_stage_update"/>
+                    <field name="working_days_close"/>
+                </field>
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="default_group_by">stage_id</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_projectstage_custom_tree" model="ir.ui.view">
+            <field name="name">project.task.type.custom.tree</field>
+            <field name="model">project.task.type.custom</field>
+            <field name="arch" type="xml">
+                <tree editable="top" string="Kanban Custom">
+                    <field name="action_perform_task" string="Field of Task"/>
+                    <field name="action_when" />
+                    <field name="action_time" />
+                    <field name="action_color" />
+                    <field name="priority"/>
+                    <field name="custom_type_id" readonly="1"/>
+                    <field name="send_mail"/>
+                    <field name="mail_action"/>
+                    <field name="template_id" attrs="{'required':[('send_mail','=',True)]}" domain="[('model', '=', 'project.task')]" />
+               </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="web_kanban_custom_project_tasktype_form">
+            <field name="name">project_tasktype_web_kanban_custom.form</field>
+            <field name="model">project.task.type</field>
+            <field name="inherit_id" ref="project.task_type_edit"/>
+            <field name="priority" eval="10"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="inside">
+                    <separator/>
+                    <field name="custom_ids" nolabel="1" context="{'default_custom_type_id': active_id}"> </field>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
