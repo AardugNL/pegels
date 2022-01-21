@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="payment_acquirer_mollie" model="payment.acquirer">
+            <field name="name">Mollie</field>
+            <field name="view_template_id" ref="payment.default_acquirer_button"/>
+            <field name="description" type="html">
+                <p>
+                    You will be prompt with Mollie Payment page for payment information
+                </p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fa fa-check"/>Online Payment
+                    </li>
+                    <li class="list-inline-item"><i class="fa fa-check"/>Payment Status Tracking
+                    </li>
+                </ul>
+            </field>
+        </record>
+
+        <record id="payment_mollie_73lines.payment_acquirer_mollie" model="payment.acquirer">
+            <field name="name">Mollie</field>
+            <field name="provider">mollie_73lines</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="mollie_acquirer_button"/>
+            <field name="pre_msg"><![CDATA[
+<p>You will be redirected to the mollie website after clicking on the payment button.</p>]]></field>
+            <field name="mollie_api_key">dummy</field>
+        </record>
+    </data>
+</odoo>
