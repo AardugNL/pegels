@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="web_kanban_custom_helpdesk_support_kanban">
+            <field name="name">helpdesk.ticket.web_kanban_custom</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban/templates/t/div/div[2]/div[3]/field[@name='partner_id']" position="after">
+                    <field name="close_date"/>
+                    <field name="assign_date"/>
+                    <field name="date_last_stage_update"/>
+                    <field name="create_date"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="helpdesk_ticket_view_form">
+            <field name="name">helpdesk.ticket.form</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="collaborator_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_helpdesk_custom_tree" model="ir.ui.view">
+            <field name="name">helpdesk.stage.custom.tree</field>
+            <field name="model">helpdesk.stage.custom</field>
+            <field name="arch" type="xml">
+                <tree editable="top" string="Kanban Custom">
+                    <field name="action_perform"/>
+                    <field name="action_when" />
+                    <field name="action_time" />
+                    <field name="action_color" />
+                    <field name="priority"/>
+                    <field name="helpdesk_stage_id" readonly="1"/>
+                    <field name="send_mail"/>
+                    <field name="mail_action"/>
+                    <field name="template_id" attrs="{'required':[('send_mail','=',True)]}" domain="[('model', '=', 'helpdesk.ticket')]"/>
+               </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="web_kanban_custom_helpdesk_support_form">
+            <field name="name">helpdesk_stage_web_kanban_custom.form</field>
+            <field name="model">helpdesk.stage</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_stage_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group[2]" position="after">
+                    <field name="custom_ids" context="{'default_helpdesk_stage_id': active_id}"> </field>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

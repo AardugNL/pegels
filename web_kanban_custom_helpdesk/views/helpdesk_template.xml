@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <template id="portal_helpdesk_ticket" inherit_id="helpdesk.portal_helpdesk_ticket" name="Helpdesk Ticket">
+            <xpath expr="//t[@t-call='portal.portal_layout']" position="replace">
+                <t t-call="portal.portal_layout">
+                    <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+                    <t t-call="portal.portal_searchbar">
+                        <t t-set="title">Tickets</t>
+                    </t>
+                    <div t-if="not grouped_tickets" class="alert alert-info">
+                        There are currently no Ticket for your account.
+                    </div>
+                    <t t-if="grouped_tickets" t-call="portal.portal_table">
+                        <t t-foreach="grouped_tickets" t-as="tickets">
+                            <thead>
+                                <tr t-attf-class="{{'thead-light' if not groupby == 'none' else ''}}">
+                                    <th class="text-right" t-if="groupby == 'none'">Ref</th>
+                                    <th t-else="">
+                                        <em class="font-weight-normal text-muted">Status:</em>
+                                        <span t-field="tickets[0].sudo().stage_id.name"/></th>
+                                    <th class="w-100">Description</th><th/>
+                                    <th class="text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <t t-foreach="tickets" t-as="ticket">
+                                <tr>
+                                    <td class="text-right"><a t-attf-href="/helpdesk/ticket/#{ticket.id}"><small>#</small><t t-esc="ticket.id"/></a></td>
+                                    <td><a t-attf-href="/helpdesk/ticket/#{ticket.id}"><span t-field="ticket.name"/></a></td><td/>
+                                    <td class="text-center"><span class="badge badge-pill badge-info" t-field="ticket.stage_id.name"/></td>
+                                </tr>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

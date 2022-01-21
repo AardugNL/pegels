@@ -1,0 +1,30 @@
+
+.o_kanban_view .oe_kanban_color_4::after {
+  background-color: #c0ecff !important;
+  color: white;
+}
+.o_kanban_view .oe_kanban_color_5::after {
+  background-color: #ffffc0 !important;
+  color: white;
+}
+.o_kanban_view .oe_kanban_color_9::after {
+  background-color: #ff6e6e !important;
+  color: white;
+}
+.o_kanban_view .oe_kanban_color_8::after {
+  background-color: #ffc3a2 !important;
+  color: white;
+}
+.o_kanban_view .oe_kanban_color_7::after {
+  background-color: #e4ffe8 !important;
+  color: white;
+}
+
+.o_kanban_view .oe_kanban_color_6::after {
+  background-color: #efc0ff !important;
+  color: white;
+}
+
+.o_kanban_load_more a{
+    color: black !important;
+}
