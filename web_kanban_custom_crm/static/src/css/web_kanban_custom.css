@@ -1,0 +1,19 @@
+.o_kanban_view .oe_kanban_color_9::after{
+  background-color: #FF0000 !important;
+  color: white;
+}
+.o_kanban_view .oe_kanban_color_8::after {
+  background-color: #F88017 !important;
+  color: white;
+}
+.o_kanban_view .oe_kanban_color_7::after{
+  background-color: #00FF00 !important;
+  color: white;
+}
+.o_kanban_view .oe_kanban_color_6::after{
+  background-color: #800080 !important;
+  color: white;
+}
+.o_kanban_load_more a{
+    color: black !important;
+}

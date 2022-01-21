@@ -1,0 +1,507 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * web_kanban_custom_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-05 06:45+0000\n"
+"PO-Revision-Date: 2020-05-05 06:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_lead__remainder_mail
+msgid "FollowUp Mail"
+msgstr "Vervolgmail"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_lead__warning_mail
+msgid "Reminder Mail"
+msgstr "Herinneringsmail"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_lead__custom_ids
+msgid "Performed Actions"
+msgstr "Uitgevoerde acties"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_opportunity_action_config__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_opportunity_action_config__next_activity_id
+msgid "Next Activity"
+msgstr "Volgende activiteit"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_opportunity_action_config__time
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_stage_custom__action_time
+msgid "Time"
+msgstr "Tijd"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_opportunity_action_config__period
+msgid "Period"
+msgstr "Periode"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__opportunity_action_config__period__day
+msgid "Day"
+msgstr "Dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__opportunity_action_config__period__month
+msgid "Month"
+msgstr "Maand"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__opportunity_action_config__period__year
+msgid "Year"
+msgstr "Jaar"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_opportunity_action_config__note
+msgid "Note"
+msgstr "Notitie"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_opportunity_action_config__user_id
+msgid "User"
+msgstr "Gebruiker"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_field_config__name
+msgid "Field Label"
+msgstr "veld Label"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_field_config__key
+msgid "Key"
+msgstr "Sleutel"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_field_config__field_id
+msgid "Field"
+msgstr "Veld"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_stage_custom__priority
+msgid "Priority"
+msgstr "Prioriteit"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_stage_custom__send_mail
+msgid "Send mail"
+msgstr "Verzend mail"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_stage_custom__template_id
+msgid "Template"
+msgstr "Sjabloon"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_stage_custom__crm_stage_id
+msgid "Stage"
+msgstr "Stadium"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_stage_custom__action_when
+msgid "Before/After"
+msgstr "Voor/na"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_when__before
+msgid "Before"
+msgstr "Voordat"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_when__after
+msgid "After"
+msgstr "Na"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_stage_custom__custom_action_id
+msgid "Custom Action"
+msgstr "Aangepaste actie"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_stage_custom__mail_action
+msgid "Mail Action"
+msgstr "Mailactie"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__mail_action__remainder
+msgid "FollowUp Mail"
+msgstr "Vervolgmail"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__mail_action__warning
+msgid "Reminder Mail"
+msgstr "Herinneringsmail"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__1_m
+msgid "1 Minute"
+msgstr "1 minuut"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__5_m
+msgid "5 Minutes"
+msgstr "5 minuten"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__15_m
+msgid "15 Minutes"
+msgstr "15 minuten"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__30_m
+msgid "30 Minutes"
+msgstr "30 minuten"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__1_h
+msgid "1 Hour"
+msgstr "1 uur"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__2_h
+msgid "2 Hours"
+msgstr "2 uur"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__4_h
+msgid "4 Hours"
+msgstr "4 uur"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__8_h
+msgid "8 Hours"
+msgstr "8 uur"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__1_d
+msgid "1 Day"
+msgstr "1 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__2_d
+msgid "2 Day"
+msgstr "2 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__3_d
+msgid "3 Days"
+msgstr "3 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__4_d
+msgid "4 Days"
+msgstr "4 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__5_d
+msgid "5 Days"
+msgstr "5 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__7_d
+msgid "7 Days"
+msgstr "7 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__10_d
+msgid "10 Days"
+msgstr "10 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__20_d
+msgid "20 Days"
+msgstr "20 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__30_d
+msgid "30 Days"
+msgstr "30 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__180_d
+msgid "180 Days"
+msgstr "180 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_time__365_d
+msgid "365 Days"
+msgstr "365 dag"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_stage_custom__action_color
+msgid "Colors"
+msgstr "Kleuren"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_color__oranje
+msgid "Orange"
+msgstr "Oranje"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_color__red
+msgid "Red"
+msgstr "Rood"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_color__green
+msgid "Green"
+msgstr "Groen"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields.selection,name:web_kanban_custom_crm.selection__crm_stage_custom__action_color__purple
+msgid "Purple"
+msgstr "Purper"
+
+#. module: web_kanban_custom_crm
+#: model:ir.model.fields,field_description:web_kanban_custom_crm.field_crm_stage_custom__action_perform
+msgid "Action perform"
+msgstr "Actie uitvoeren"
+
+#. module: web_kanban_custom_crm
+#: code:addons/web_kanban_custom_crm/model/crm.py:283
+#, python-format
+msgid "Misconfiguration, check Field and Time."
+msgstr "Verkeerde configuratie, controleer veld en tijd."
+
+#. module: web_kanban_custom_crm
+#: model_terms:ir.ui.view,arch_db:web_kanban_custom_crm.view_form_crm_action_configuration
+msgid "Note: By default activity take salesperson field of related opportunity but salesperson not set on opportunity then this user set for activuty. and if both are not availbale then activity not create."
+msgstr "Opmerking: Standaard neemt de activiteit het veld verkoper van gerelateerde verkoopkans in, maar verkoper niet ingesteld op verkoopkans, dan heeft deze gebruiker ingesteld op activuty. en als beide niet beschikbaar zijn, wordt er geen activiteit gecreëerd."
+
+#. module: web_kanban_custom_crm
+#: model:ir.actions.server,name:web_kanban_custom_crm.action_fetchmail_mail_reminder
+msgid "Reminder mail for Lead"
+msgstr "Herinneringsmail voor Lead"
+
+#. module: web_kanban_custom_crm
+#: model:ir.cron,cron_name:web_kanban_custom_crm.ir_cron_mail_reminder_send
+msgid "Opportunity Reminder"
+msgstr "Gelegenheidsherinnering"
+
+#. module: web_kanban_custom_crm
+#: model:mail.template,subject:web_kanban_custom_crm.email_template_lead_followup_mail
+#: model:mail.template,subject:web_kanban_custom_crm.email_template_lead_reminder_mail
+msgid "${object.company_id.name|safe} Opportunity (Ref: ${object.name or 'n/a' })"
+msgstr "${object.company_id.name|safe} Kans (Ref: ${object.name or 'n/a' })"
+
+#. module: web_kanban_custom_crm
+#: model:mail.template,body_html:web_kanban_custom_crm.email_template_lead_followup_mail
+msgid ""
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p>Hello Dear Customer ${object.partner_id.name or object.contact_name or ''},</p>\n"
+"    <p>\n"
+"        &nbsp;&nbsp;We have not found any Update on this Opportunity since long time. Please Provide update and show your interest.<br/>\n"
+"        </p>\n"
+"        <p>Here are some details:</p>\n"
+"        <br/>\n"
+"        <ul>\n"
+"            <li>Name: ${object.name}</li>\n"
+"            <li>Expected Closing Date: ${object.date_deadline or ''}</li>\n"
+"            <li>Description: ${object.description}</li>\n"
+"        </ul>\n"
+"        <br/>\n"
+"        <p>If you have any question, do not hesitate to contact us.</p>\n"
+"        <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>\n"
+"        <br/>\n"
+"        <br/>\n"
+"        <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"           <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"               <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"        </div>\n"
+"        <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"           <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"           % if object.company_id.street:\n"
+"               ${object.company_id.street}<br/>\n"
+"           % endif\n"
+"           % if object.company_id.street2:\n"
+"               ${object.company_id.street2}<br/>\n"
+"           % endif\n"
+"           % if object.company_id.city or object.company_id.zip:\n"
+"               ${object.company_id.zip} ${object.company_id.city}<br/>\n"
+"           % endif\n"
+"           % if object.company_id.country_id:\n"
+"               ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
+"           % endif\n"
+"           </span>\n"
+"           % if object.company_id.phone:\n"
+"               <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                   Phone:&nbsp; ${object.company_id.phone}\n"
+"               </div>\n"
+"           % endif\n"
+"           % if object.company_id.website:\n"
+"               <div>\n"
+"                   Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"               </div>\n"
+"           %endif\n"
+"           <p></p>\n"
+"       </div>\n"
+"   </div>\n"
+"   "
+msgstr ""
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p>Hallo lieve klant ${object.partner_id.name or object.contact_name or ''},</p>\n"
+"    <p>\n"
+"        &nbsp;&nbsp;We hebben sinds lange tijd geen update over deze mogelijkheid gevonden. Geef een update en toon uw interesse.<br/>\n"
+"    </p>\n"
+"    <p>Hier volgen enkele details:</p>\n"
+"    <br/>\n"
+"    <ul>\n"
+"        <li>Naam: ${object.name}</li>\n"
+"        <li>Verwachte sluitingsdatum: ${object.date_deadline or ''}</li>\n"
+"        <li>Omschrijving: ${object.description}</li>\n"
+"    </ul>\n"
+"    <br/>\n"
+"    <p>Mocht u vragen hebben, neem dan gerust contact met ons op.</p>\n"
+"    <p>Dank u voor het kiezen ${object.company_id.name or 'us'}!</p>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"        <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"           <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"       <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"       % if object.company_id.street:\n"
+"           ${object.company_id.street}<br/>\n"
+"       % endif\n"
+"       % if object.company_id.street2:\n"
+"           ${object.company_id.street2}<br/>\n"
+"       % endif\n"
+"       % if object.company_id.city or object.company_id.zip:\n"
+"           ${object.company_id.zip} ${object.company_id.city}<br/>\n"
+"       % endif\n"
+"       % if object.company_id.country_id:\n"
+"           ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
+"       % endif\n"
+"       </span>\n"
+"       % if object.company_id.phone:\n"
+"           <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"               Telefoon:&nbsp; ${object.company_id.phone}\n"
+"           </div>\n"
+"       % endif\n"
+"       % if object.company_id.website:\n"
+"           <div>\n"
+"               Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"           </div>\n"
+"       %endif\n"
+"       <p></p>\n"
+"    </div>\n"
+"   </div>\n"
+"   "
+
+#. module: web_kanban_custom_crm
+#: model:mail.template,body_html:web_kanban_custom_crm.email_template_lead_reminder_mail
+msgid ""
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p>Hello Dear Customer ${object.partner_id.name or object.contact_name or ''},</p>\n"
+"    <p>\n"
+"        &nbsp;&nbsp;This Opportinity have not found any action since long time, Its now near to closing period, Are you still interested? please show your update and avoid to close.<br/>\n"
+"    </p>\n"
+"    <p>Here are some details:</p>\n"
+"     <br/>\n"
+"    <ul>\n"
+"        <li>Name: ${object.name}</li>\n"
+"        <li>Expected Closing Date: ${object.date_deadline or ''}</li>\n"
+"        <li>Description: ${object.description}</li>\n"
+"    </ul>\n"
+"    <p>If you have any question, do not hesitate to contact us.</p>\n"
+"    <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"       <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"           <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"        % if object.company_id.street:\n"
+"            ${object.company_id.street}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.street2:\n"
+"           ${object.company_id.street2}<br/>\n"
+"       % endif\n"
+"       % if object.company_id.city or object.company_id.zip:\n"
+"           ${object.company_id.zip} ${object.company_id.city}<br/>\n"
+"       % endif\n"
+"       % if object.company_id.country_id:\n"
+"           ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
+"       % endif\n"
+"       </span>\n"
+"       % if object.company_id.phone:\n"
+"           <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"               Phone:&nbsp; ${object.company_id.phone}\n"
+"           </div>\n"
+"       % endif\n"
+"       % if object.company_id.website:\n"
+"           <div>\n"
+"               Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"           </div>\n"
+"        %endif\n"
+"        <p></p>\n"
+"      </div>\n"
+"   </div>\n"
+"   "
+msgstr ""
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p>Hallo lieve klant ${object.partner_id.name or object.contact_name or ''},</p>\n"
+"    <p>\n"
+"        &nbsp;&nbsp;Deze mogelijkheid heeft sinds lange tijd geen actie meer gevonden. Het is nu bijna de sluitingsperiode. Bent u nog steeds geïnteresseerd? toon uw update en vermijd te sluiten.<br/>\n"
+"    </p>\n"
+"    <p>Hier volgen enkele details:</p>\n"
+"     <br/>\n"
+"    <ul>\n"
+"        <li>Naam: ${object.name}</li>\n"
+"        <li>Verwachte sluitingsdatum: ${object.date_deadline or ''}</li>\n"
+"        <li>Omschrijving: ${object.description}</li>\n"
+"    </ul>\n"
+"    <p>Als u vragen heeft, neem dan gerust contact met ons op.</p>\n"
+"    <p>Dank u voor het kiezen ${object.company_id.name or 'us'}!</p>\n"
+"    <br/>\n"
+"    <br/>\n"
+"    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"       <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"           <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"    </div>\n"
+"    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"        % if object.company_id.street:\n"
+"            ${object.company_id.street}<br/>\n"
+"        % endif\n"
+"        % if object.company_id.street2:\n"
+"           ${object.company_id.street2}<br/>\n"
+"       % endif\n"
+"       % if object.company_id.city or object.company_id.zip:\n"
+"           ${object.company_id.zip} ${object.company_id.city}<br/>\n"
+"       % endif\n"
+"       % if object.company_id.country_id:\n"
+"           ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>\n"
+"       % endif\n"
+"       </span>\n"
+"       % if object.company_id.phone:\n"
+"           <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"               Telefoon:&nbsp; ${object.company_id.phone}\n"
+"           </div>\n"
+"       % endif\n"
+"       % if object.company_id.website:\n"
+"           <div>\n"
+"               Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"           </div>\n"
+"        %endif\n"
+"        <p></p>\n"
+"      </div>\n"
+"   </div>\n"
+"   "
