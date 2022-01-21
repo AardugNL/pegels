@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="portal_my_tasks_add_code" name="Link to frontend portal" inherit_id="project.portal_my_tasks">
+        <xpath expr="//th[hasclass('text-left')]" position="replace">
+            <th class="text-left">Code</th>
+        </xpath>
+        <xpath expr="//td[hasclass('text-left')]" position="replace">
+            <td class="text-left">
+                <span t-if="task.code" t-esc="task.code"/>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>
