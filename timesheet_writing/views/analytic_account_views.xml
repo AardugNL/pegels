@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--added employee analytic account line-->
+        <record id="view_account_analytic_line_form_inherit_custom" model="ir.ui.view">
+            <field name="name">account.analytic.line.form.inherit.custom</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_line_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/group/group[1]/field[@name='account_id']" position="after">
+                    <field name="employee_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- accounting entry work -->
+        <record id="view_account_analytic_line_form_add_accounting_entry" model="ir.ui.view">
+            <field name="name">account.analytic.line.form.inherit</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="account.view_account_analytic_line_form_inherit_account"/>
+            <field name="arch" type="xml">
+                <field name="move_id" position="after">
+                    <field name="account_move_id"/>
+                </field>
+                <field name="general_account_id" position="before">
+                    <field name="make_accounting_entry"/>
+                </field>
+            </field>
+        </record>
+
+       <!-- point 3 only one field view-->
+        <record id="view_account_analytic_line_form_desc" model="ir.ui.view">
+            <field name="name">account.analytic.line.form.desc</field>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <form string="Analytic Tags">
+                    <sheet>
+                        <group>
+                            <field name="long_description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_account_analytic_line_form_img" model="ir.ui.view">
+            <field name="name">account.analytic.line.form.img</field>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <form string="Analytic Tags">
+                    <sheet>
+                        <field name="image_up" widget="image"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

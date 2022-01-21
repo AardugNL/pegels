@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--added product cost field in timesheet tree view-->
+       <record id="odoo_timesheet_view_form_inherit_sale_timesheet" model="ir.ui.view">
+            <field name="name">project.task.form.inherit.timesheet</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='unit_amount']" position="after">
+                    <field name="product_cost" readonly="1"/>
+                </xpath>
+                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='name']" position="after">
+                    <field name="work_type_id"/>
+                    <field name="long_description" invisible="1"/>
+                    <field name="image_up" invisible="1"/>
+                    <field name="product_id" invisible="1"/>
+                    <button name="action_view_analytic_line_lond_desc" type="object" class="fa fa-info-circle" style="color: #00A04A"
+                            attrs="{'invisible': [('long_description', '=', '')]}"/>
+                    <button name="action_view_analytic_line_lond_desc" type="object" class="fa fa-info-circle" style="color: #DC6965"
+                            attrs="{'invisible': [('long_description', '!=', '')]}"/>
+                    <button name="action_view_analytic_line_img" type="object"  class="fa fa-info-circle" style="color: #00A04A"
+                            attrs="{'invisible': [('image_up', '=', False)]}"/>
+                    <button name="action_view_analytic_line_img" type="object"  class="fa fa-info-circle" style="color: #DC6965"
+                            attrs="{'invisible': [('image_up', '!=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='effective_hours']" position="after">
+                    <field name="total_task_cost"/>
+                </xpath>
+            </field>
+       </record>
+
+       <!-- point 4: -->
+       <record id="view_task_form2_inherit" model="ir.ui.view">
+            <field name="name">project.task.form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_open_parent_task']" position="before">
+                    <button class="oe_stat_button" icon="fa-list-alt" type="object" name="show_analytic_account_line" string="Result of AA"/>
+                </xpath>
+            </field>
+       </record>
+
+    </data>
+</odoo>

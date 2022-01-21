@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to add product_id field -->
+        <record id="timesheet_writing_timesheet_work_type_form_view" model="ir.ui.view">
+            <field name="name">timesheet.work.type.form</field>
+            <field name="model">timesheet.work.type</field>
+            <field name="inherit_id" ref="odoo_mobile_timesheet.timesheet_work_type_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="product_id"/>
+                </xpath>
+
+            </field>
+        </record>
+        <!--inherit tree view added product_id field-->
+        <record id="timesheet_work_type_tree_view_inh" model="ir.ui.view">
+            <field name="name">timesheet.work.type.tree.inh</field>
+            <field name="model">timesheet.work.type</field>
+            <field name="inherit_id" ref="odoo_mobile_timesheet.timesheet_work_type_tree_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="product_id"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_employee_form_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="parent_id" position="after">
+                    <field name="work_type_id"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

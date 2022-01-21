@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record id="view_users_form_inherit_custom_timesheet" model="ir.ui.view">
+            <field name="name">res.users.form.inherit.custom.timesheet</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/notebook/page[@name='access_rights']/group" position="after">
+                    <group>
+                        <field name="is_show_employee"/>
+                        <field name="show_timesheet"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

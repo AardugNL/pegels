@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- point 2 -->
+        <template id="myaccount_timesheet_uren" name="Link to frontend portal" inherit_id="portal.frontend_layout">
+            <xpath expr="//a[@id='o_logout']" position="before">
+                <a t-if="user_id.show_timesheet" href="/my/add_timesheet" role="menuitem" class="dropdown-item">Uren Schrijven</a>
+            </xpath>
+        </template>
+
+        <template id="my_timesheet" name="frontend portal" inherit_id="odoo_mobile_timesheet.mohammed_myaccount_timesheet_ids">
+            <xpath expr="//a[@href='/my/employee/timesheets']" position="attributes">
+                <attribute name="t-if">user_id.show_timesheet</attribute>
+            </xpath>
+        </template>
+
+        <!-- point 5 -->
+        <template id="myaccount_timesheet_peoject_amt" name="Link to frontend portal" inherit_id="project.portal_my_projects">
+            <xpath expr="//td[hasclass('text-right')]" position="before">
+                <td t-if="project and project.analytic_account_id and project.analytic_account_id.line_ids" class="text-right">
+                    <strong>Amount  </strong>
+                    <t t-esc="round(sum(line.amount for line in project.analytic_account_id.line_ids),2)"/>
+                </td>
+                <td t-else="">
+                </td>
+            </xpath>
+        </template>
+
+        <template id="portal_my_home_timesheet_inh" name="Link to frontend portal" inherit_id="hr_timesheet.portal_my_home_timesheet">
+            <xpath expr="//t[@t-if='timesheet_count']" position="replace">
+                <t t-if="timesheet_count and user_id.show_timesheet" t-call="portal.portal_docs_entry">
+                    <t t-set="title">Timesheets</t>
+                    <t t-set="url" t-value="'/my/timesheets'"/>
+                    <t t-set="count" t-value="timesheet_count"/>
+                </t>
+            </xpath>
+        </template>
+        
+        <template id="add_new_timesheet" name="New Timesheet">
+            <span id="portal_timesheet" t-esc="portal_timesheet" class="o_hidden"/>
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <div class="oe_structure">
+                            <div t-if="not no_breadcrumbs and not my_details and not breadcrumbs_searchbar" class="o_portal container mt-3">
+                                <!-- <div class="row align-items-center bg-light no-gutters border rounded col-xs-12 col-md-6" > -->
+                                <div class="row align-items-center bg-light no-gutters border rounded col-xs-12 col-md-8" >
+                                    <div class="col">
+                                        <ol class="o_portal_submenu breadcrumb mb-0 py-2 flex-grow-1">
+                                            <!-- <li class="breadcrumb-item"><a href="/my/home" aria-label="Home" title="Home"><i class="fa fa-home"/></a></li>
+                                            <li class="breadcrumb-item"><a t-attf-href="/my/timesheets?#{keep_query()}">My Timesheets</a></li> -->
+                                                <li class="breadcrumb-item"><a t-attf-href="/my/employee/timesheets?#{keep_query()}">Employee Timesheets</a></li>
+                                            <li class="breadcrumb-item"><t>New Timesheet</t></li>
+                                        </ol>
+                                    </div>
+                                    <div t-if="prev_record or next_record" class="col flex-grow-0">
+                                        <t t-call='portal.record_pager'/>
+                                    </div>
+                                </div>
+                            </div>
+                            <form id="create_new_timesheet" action="/my/create_new_timesheet" method="post" class="s_website_form" enctype="multipart/form-data"        data-editable-form="false">
+                            <!-- <form id="create_new_timesheet" action="/my/create_new_timesheet" method="post"> -->
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <div class="row o_website_portal_details mt16">
+                                    <div class="col-md-8">
+                                        <div class="row">
+                                            <div class="form-group  col-lg-6" id="project">
+                                                <label class="control-label" for="project_id">Project</label>
+                                                    <select id="create_select" name="project_id" required="required" class="form-control">
+                                                        <option value="">Select Project...</option>
+                                                        <t t-foreach="project_ids or []" t-as="project">
+                                                            <option t-att-value="project.id" t-att-selected="project.id == projects and 'selected' or null">
+                                                                <t t-esc="project.name" />
+                                                            </option>
+                                                        </t>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group  col-lg-6" id="task">
+                                                <label class="control-label" for="task_id">Task</label>
+                                                    <select name="task_id" class="form-control" style="border-color: #27BB64">
+                                                        <option value="">Select Task...</option>
+                                                        <t t-foreach="task_ids or []" t-as="task">
+                                                            <option t-att-value="task.id" t-att-data-project_id="task.project_id.id" t-att-selected="task.id == tasks and 'selected' or null">
+                                                                <t t-esc="task.name" />
+                                                            </option>
+                                                        </t>
+                                                    </select>
+                                            </div>
+                                            <div class="clearfix"/>
+                                            <div class="form-group  col-lg-6">
+                                                <label class="control-label" for="date_action">Date</label>
+                                                    <input type="date" id="start_date" name="start_date" class="form-control" required="required" t-att-value="timesheet_date" style="border-color: #27BB64"/>
+                                            </div>
+                                            <div class="form-group col-lg-6">
+                                                <t t-if="user_id.is_show_employee">
+                                                    <label class="control-label" for="employee_id">Employee</label>
+                                                    <select id="create_employee" name="employee_id" required="required" class="form-control">
+                                                        <option value="">Select Employee...</option>
+                                                        <t t-foreach="employee_ids or []" t-as="employee">
+                                                            <option t-att-value="employee.id" t-att-selected="employee.id == current_employee.id" t-att-data-work_type="employee.work_type_id.id">
+                                                                <t t-esc="employee.name" />
+                                                            </option>
+                                                        </t>
+                                                    </select>
+                                                </t>
+                                            </div>
+                                            <div class="form-group  col-lg-6">
+                                                <label class="control-label" for="work_type">Work Type</label>
+                                                <select name="work_type" class="form-control" required="required">
+                                                    <option value="">Select Work Type...</option>
+                                                    <t t-foreach="work_type_ids or []" t-as="work_type">
+                                                        <option t-att-value="work_type.id">
+                                                            <t t-esc="work_type.name" />
+                                                        </option>
+                                                    </t>
+                                                </select>
+                                            </div>
+                                            <div class="form-group  col-lg-6">
+                                                <label class="control-label" for="quantity">Duration (Hours)</label>
+                                                <input class="form-control" type="time" name="quantity" id="myTime" min="00:00" max="23:59" t-att-value="duration"/>
+                                            </div>
+                                            <div class="clearfix"/>
+
+                                            <!-- client requested to remove this -->
+                                            <!-- <div class="form-group  col-lg-6">
+                                                <label class="control-label" for="start_time">Start Time</label>
+                                                <input class="form-control" type="time" name="start_time" id="start_time" min="00:00" max="23:59" t-att-value="start_time"/>
+                                            </div>
+                                            <div class="form-group  col-lg-6">
+                                                <label class="control-label" for="end_time">End Time</label>
+                                                <input class="form-control" type="time" name="end_time" id="end_time" min="00:00" max="23:59" t-att-value="end_time"/>
+                                            </div> -->
+                                            <!-- <div class="form-group  col-lg-6">
+                                                <label class="control-label" for="is_billable">Is Billable</label>
+                                                <p>
+                                                    <input type="checkbox" name="is_billable" id="is_billable"/>
+                                                </p>
+                                            </div>
+                                            <div class="form-group  col-lg-6">
+                                                <label class="control-label" for="payment_status">Is Paid</label>
+                                                <p>
+                                                    <input type="checkbox" name="is_paid" id="is_paid"/>
+                                                </p>
+                                            </div> -->
+                                            <div class="form-group col-md-12">
+                                                <label class="control-label" for="description">Description</label>
+                                                <textarea class="form-control o_website_form_input" required="required" id="description" name="description"></textarea>
+                                            </div>
+                                            <!-- point 1: -->
+                                            <div class="form-group col-md-12">
+                                                <label class="control-label" for="long_description">Long Description</label>
+                                                <textarea class="form-control o_website_form_input" id="long_description" name="long_description"></textarea>
+                                            </div>
+                                            <div class="form-group col-md-12" >
+                                                <input type='file' id="inputFile" name="image_up" class="form-control o_website_form_input"/><br/>
+                                                <img class="mt8" id="imgPreview" src="/web/static/src/img/placeholder.png" style="max-width:270px;"/>
+                                            </div>
+                                            <input type="hidden" name="redirect" t-att-value="redirect"/>
+                                        </div>
+                                        <div class="clearfix"/>
+                                        <div class="pull-right class_button">
+                                            <button type="submit" class="btn btn-default btn-primary mb32 ">
+                                                Submit
+                                            </button>
+                                            <a t-attf-href="/my/add_timesheet?{{keep_query(timesheet_date = timesheet_date)}}" class="btn btn-light ml8 mb32 discard_project_form" id="discard_project_form" name="discard_timesheet">Discard </a>
+                                            <a class="btn btn-light ml8 mb32" t-attf-href="/odoo_timesheet_portal_user_employee/select_timesheet">Back</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>
